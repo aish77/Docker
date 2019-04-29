@@ -1,0 +1,73 @@
+Script started on Thursday 25 April 2019 08:24:41 PM IST
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+9329f3a89869        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              sayhello2.1.e3lehk02s6btbbzg4dr4iwmb9
+62e3274f14f0        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.5.45t7gqzgv6b1pn8xwjiqr6qq9
+427bcf673937        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.4.zapjprl3ae3zvbhnwgk400zyj
+5513f51dbe53        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.3.jwxzsg2j7ccnmkx6iu80fdfpy
+e2bd42dee0b0        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.1.urk39v7treoogmp891gowap5g
+180f09e971cd        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.2.kdclvw0hj66l3th5yoqfg0917
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker co[K[Kimage ls
+REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
+tomcat2                                   latest              232e519e86c1        3 months ago        1.05GB
+<none>                                    <none>              b3c08157539e        3 months ago        1.05GB
+<none>                                    <none>              7dea5bebfcdb        3 months ago        463MB
+sayhello                                  latest              acab7d8d4909        3 months ago        131MB
+hellojava                                 latest              d9a1c9ea8b26        3 months ago        643MB
+<none>                                    <none>              93134c6f64e9        3 months ago        643MB
+<none>                                    <none>              5f44c4daa67b        3 months ago        643MB
+<none>                                    <none>              e7cbefc96b7b        3 months ago        643MB
+<none>                                    <none>              cd339a9a6050        3 months ago        643MB
+<none>                                    <none>              3728485ab881        3 months ago        643MB
+whale001                                  latest              74f6826e35c8        3 months ago        247MB
+whales001                                 latest              74f6826e35c8        3 months ago        247MB
+newimage                                  latest              8daf0f1a39d2        3 months ago        111MB
+ti001                                     latest              ac1e66d7e4fe        3 months ago        85.8MB
+kavalga/tiimage                           latest              ac1e66d7e4fe        3 months ago        85.8MB
+kavalga/ti001                             latest              16c70c2b624b        3 months ago        111MB
+kavalga/timage                            latest              16c70c2b624b        3 months ago        111MB
+testimage                                 latest              16c70c2b624b        3 months ago        111MB
+tomcat                                    8                   1a51cb5e3006        3 months ago        462MB
+python                                    2.7-slim            f090c78858fa        3 months ago        120MB
+ubuntu                                    14.04               7e4b16ae8b23        3 months ago        188MB
+prakaram/jenkins                          latest              0147c2cdd418        15 months ago       817MB
+jenkinsnew02                              lts                 66be4f0b83b3        15 months ago       808MB
+jenkinsnew01                              lts                 63a943d4cf28        15 months ago       808MB
+jenkinsnew                                lts                 2a00a0903b6b        15 months ago       808MB
+jenkins                                   lts                 665aabd8c516        15 months ago       808MB
+tomcat                                    9                   4f88b8ccbcd0        15 months ago       714MB
+tomcat                                    7                   d10641f583b3        15 months ago       456MB
+jenkins/jenkins                           lts                 279f21046a63        15 months ago       813MB
+ubuntu                                    16.04               2a4cca5ac898        15 months ago       111MB
+docker.bintray.io/jfrog/artifactory-oss   latest              8456545abc59        15 months ago       1.1GB
+hello-world                               latest              f2a91732366c        17 months ago       1.85kB
+java                                      8                   d23bdf5b1b1b        2 years ago         643MB
+docker/whalesay                           latest              6b362a9f73eb        3 years ago         247MB
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker run -it ubuntuntu[K[K[K[K[K[Kntu:16.04 /bin/bash
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# ls
+[0m[01;34mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;34mlib[0m  [01;34mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;34msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# mkdir newfolder
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# ls
+[0m[01;34mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;34mlib[0m  [01;34mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mnewfolder[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;34msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# rm newfolser   dr er
+rm: cannot remove 'newfolder': Is a directory
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# rm -r newfolder/
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# ls
+[0m[01;34mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;34mlib[0m  [01;34mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;34msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+]0;root@b8ed6cda807b: /root@b8ed6cda807b:/# exit
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container ps[K[Kls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+9329f3a89869        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              sayhello2.1.e3lehk02s6btbbzg4dr4iwmb9
+62e3274f14f0        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.5.45t7gqzgv6b1pn8xwjiqr6qq9
+427bcf673937        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.4.zapjprl3ae3zvbhnwgk400zyj
+5513f51dbe53        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.3.jwxzsg2j7ccnmkx6iu80fdfpy
+e2bd42dee0b0        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.1.urk39v7treoogmp891gowap5g
+180f09e971cd        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.2.kdclvw0hj66l3th5yoqfg0917
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container lsrun -it ubuntu:16.04 /bin/bash
+]0;root@8fb0a3a53ec3: /root@8fb0a3a53ec3:/# xit   exit
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ ec[Kxit
+exit
+
+Script done on Thursday 25 April 2019 11:43:10 PM IST

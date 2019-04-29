@@ -1,0 +1,66 @@
+Script started on Friday 26 April 2019 02:43:00 PM IST
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS               NAMES
+853ff403f024        a11b8875fe2e        "/bin/bash"         About a minute ago   Up 59 seconds                           fervent_mirzakhani
+d5be1f0a7f85        sayhello:latest     "python app.py"     34 minutes ago       Up 33 minutes       80/tcp              pyweb_PyApp.2.yux3ki9b0uc3uys53gqqj1z9i
+3850153e2529        sayhello:latest     "python app.py"     34 minutes ago       Up 33 minutes       80/tcp              pyweb_PyApp.4.vfp70ws76q7pf43ud19sr7plz
+60cb57f4db98        sayhello:latest     "python app.py"     34 minutes ago       Up 33 minutes       80/tcp              sayhello2.1.pdwf7vnyshrfw99k9vgorusfe
+193ed935ec95        sayhello:latest     "python app.py"     34 minutes ago       Up 33 minutes       80/tcp              pyweb_PyApp.5.omf9058wudag98aa99c3f0a6l
+13208f75494c        sayhello:latest     "python app.py"     34 minutes ago       Up 33 minutes       80/tcp              pyweb_PyApp.3.t9p5tjy29ip2skyr2ftj6she0
+929d03d433f1        sayhello:latest     "python app.py"     34 minutes ago       Up 34 minutes       80/tcp              pyweb_PyApp.1.jmayxl19fmzzfr24wrhys5ka8
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker attach a11b8875fe2e 
+Error: No such container: a11b8875fe2e
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker attach a11b8875fe2e [K\
+> ^C
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker attach a11b8875fe2e\[K
+Error: No such container: a11b8875fe2e
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker attach [K[K[K[K[K[K[Kcom[Kntainer attach 853ff403f024 [K
+[K]0;root@853ff403f024: /root@853ff403f024:/#  [K]0;root@853ff403f024: /root@853ff403f024:/#  exit 8
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+8fb9d0e311e4        a11b8875fe2e        "/bin/bash"         54 seconds ago      Up 52 seconds                           wizardly_minsky
+d5be1f0a7f85        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.2.yux3ki9b0uc3uys53gqqj1z9i
+3850153e2529        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.4.vfp70ws76q7pf43ud19sr7plz
+60cb57f4db98        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              sayhello2.1.pdwf7vnyshrfw99k9vgorusfe
+193ed935ec95        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.5.omf9058wudag98aa99c3f0a6l
+13208f75494c        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.3.t9p5tjy29ip2skyr2ftj6she0
+929d03d433f1        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.1.jmayxl19fmzzfr24wrhys5ka8
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container restart 8fb9d0e311e4 [K
+8fb9d0e311e4
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container start[K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container start wizardly_minsky
+wizardly_minsky
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container start wizardly_minsky-wizardly_minskytwizardly_minsky wizardly_minsky[1@i[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /bin/bash
+unknown shorthand flag: 't' in -t
+See 'docker container start --help'.
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container start -it wizardly_minsky /bin/bash[C[1P
+you cannot start and attach multiple containers at once
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container start -i wizardly_minsky /bin/bash[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls -s
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES                                     SIZE
+8fb9d0e311e4        a11b8875fe2e        "/bin/bash"         8 minutes ago       Up 6 minutes                            wizardly_minsky                           3B (virtual 111MB)
+d5be1f0a7f85        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.2.yux3ki9b0uc3uys53gqqj1z9i   323kB (virtual 131MB)
+3850153e2529        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.4.vfp70ws76q7pf43ud19sr7plz   323kB (virtual 131MB)
+60cb57f4db98        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              sayhello2.1.pdwf7vnyshrfw99k9vgorusfe     323kB (virtual 131MB)
+193ed935ec95        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.5.omf9058wudag98aa99c3f0a6l   323kB (virtual 131MB)
+13208f75494c        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.3.t9p5tjy29ip2skyr2ftj6she0   323kB (virtual 131MB)
+929d03d433f1        sayhello:latest     "python app.py"     3 hours ago         Up 3 hours          80/tcp              pyweb_PyApp.1.jmayxl19fmzzfr24wrhys5ka8   323kB (virtual 131MB)
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker new[Ktwork
+
+Usage:	docker network COMMAND
+
+Manage networks
+
+Options:
+
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ 

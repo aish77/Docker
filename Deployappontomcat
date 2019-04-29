@@ -1,0 +1,801 @@
+Script started on Monday 29 April 2019 02:34:19 PM IST
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t javaapp [K[K[K[K-app
+"docker image build" requires exactly 1 argument.
+See 'docker image build --help'.
+
+Usage:  docker image build [OPTIONS] PATH | URL | - [flags]
+
+Build an image from a Dockerfile
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  2.785MBSending build context to Docker daemon  4.456MBSending build context to Docker daemon  6.128MBSending build context to Docker daemon  7.242MBSending build context to Docker daemon   9.47MBSending build context to Docker daemon  10.58MBSending build context to Docker daemon   11.7MBSending build context to Docker daemon  13.37MBSending build context to Docker daemon  15.04MBSending build context to Docker daemon  17.27MBSending build context to Docker daemon  18.94MBSending build context to Docker daemon  20.05MBSending build context to Docker daemon  21.73MBSending build context to Docker daemon   23.4MBSending build context to Docker daemon  25.07MBSending build context to Docker daemon  27.85MBSending build context to Docker daemon  30.64MBSending build context to Docker daemon   31.2MBSending build context to Docker daemon  33.98MBSending build context to Docker daemon  38.44MBSending build context to Docker daemon  39.55MBSending build context to Docker daemon  42.34MBSending build context to Docker daemon  44.56MBSending build context to Docker daemon  46.79MBSending build context to Docker daemon  48.46MBSending build context to Docker daemon  50.69MBSending build context to Docker daemon  52.36MBSending build context to Docker daemon  52.92MBSending build context to Docker daemon  54.59MBSending build context to Docker daemon  56.26MBSending build context to Docker daemon  57.38MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon  62.95MBSending build context to Docker daemon  64.06MBSending build context to Docker daemon  65.18MBSending build context to Docker daemon  67.96MBSending build context to Docker daemon  68.52MBSending build context to Docker daemon  70.19MBSending build context to Docker daemon  70.75MBSending build context to Docker daemon   71.3MBSending build context to Docker daemon  71.86MBSending build context to Docker daemon  72.97MBSending build context to Docker daemon  76.87MBSending build context to Docker daemon  79.66MBSending build context to Docker daemon  81.89MBSending build context to Docker daemon  84.67MBSending build context to Docker daemon  89.13MBSending build context to Docker daemon   90.8MBSending build context to Docker daemon  94.58MB
+Step 1/6 : FROM Ubuntu:14.04
+invalid reference format: repository name must be lowercase
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .[K[11Pcontainer lsrun  -it a11b8875fe2e  /bin/bash[4@exec[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Prun[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16@ishwarydeath/ubuntucontainer[C[C[C[C[C[C[C[C[C[Cimage ls[Kcontainer start aishwarydeath/ubuntucontainer[1Ppull[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clogin[Kcontainer attach aishwarydeath/1.00run aishwarydeath/1.00 /bin/bash[Kls[Kattach a11b8875fe2e[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker image ls
+REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
+aishwarydeath/ubuntucontainer             2.0                 a11b8875fe2e        3 days ago          111MB
+testubuntuimage                           latest              a11b8875fe2e        3 days ago          111MB
+ubuntu                                    latest              a11b8875fe2e        3 days ago          111MB
+aishwarydeath/1.00                        latest              a11b8875fe2e        3 days ago          111MB
+tomcat2                                   latest              232e519e86c1        3 months ago        1.05GB
+<none>                                    <none>              b3c08157539e        3 months ago        1.05GB
+<none>                                    <none>              7dea5bebfcdb        3 months ago        463MB
+sayhello                                  latest              acab7d8d4909        3 months ago        131MB
+hellojava                                 latest              d9a1c9ea8b26        3 months ago        643MB
+<none>                                    <none>              93134c6f64e9        3 months ago        643MB
+<none>                                    <none>              5f44c4daa67b        3 months ago        643MB
+<none>                                    <none>              e7cbefc96b7b        3 months ago        643MB
+<none>                                    <none>              cd339a9a6050        3 months ago        643MB
+<none>                                    <none>              3728485ab881        3 months ago        643MB
+whale001                                  latest              74f6826e35c8        3 months ago        247MB
+whales001                                 latest              74f6826e35c8        3 months ago        247MB
+newimage                                  latest              8daf0f1a39d2        3 months ago        111MB
+kavalga/tiimage                           latest              ac1e66d7e4fe        3 months ago        85.8MB
+ti001                                     latest              ac1e66d7e4fe        3 months ago        85.8MB
+kavalga/ti001                             latest              16c70c2b624b        3 months ago        111MB
+kavalga/timage                            latest              16c70c2b624b        3 months ago        111MB
+testimage                                 latest              16c70c2b624b        3 months ago        111MB
+tomcat                                    8                   1a51cb5e3006        4 months ago        462MB
+python                                    2.7-slim            f090c78858fa        4 months ago        120MB
+ubuntu                                    14.04               7e4b16ae8b23        4 months ago        188MB
+prakaram/jenkins                          latest              0147c2cdd418        15 months ago       817MB
+jenkinsnew02                              lts                 66be4f0b83b3        15 months ago       808MB
+jenkinsnew01                              lts                 63a943d4cf28        15 months ago       808MB
+jenkinsnew                                lts                 2a00a0903b6b        15 months ago       808MB
+jenkins                                   lts                 665aabd8c516        15 months ago       808MB
+tomcat                                    9                   4f88b8ccbcd0        15 months ago       714MB
+tomcat                                    7                   d10641f583b3        15 months ago       456MB
+jenkins/jenkins                           lts                 279f21046a63        15 months ago       813MB
+ubuntu                                    16.04               2a4cca5ac898        15 months ago       111MB
+docker.bintray.io/jfrog/artifactory-oss   latest              8456545abc59        15 months ago       1.1GB
+hello-world                               latest              f2a91732366c        17 months ago       1.85kB
+java                                      8                   d23bdf5b1b1b        2 years ago         643MB
+docker/whalesay                           latest              6b362a9f73eb        3 years ago         247MB
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image lsbuild -t java-app .[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 7L, 222C[>c[2;1H[38;5;130mFROM [mUbuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mCMD [m[[31m"apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                                                               [9;1H~                                                                                                               [10;1H~                                                                                                               [11;1H~                                                                                                               [12;1H~                                                                                                               [13;1H~                                                                                                               [14;1H~                                                                                                               [15;1H~                                                                                                               [16;1H~                                                                                                               [17;1H~                                                                                                               [18;1H~                                                                                                               [19;1H~                                                                                                               [20;1H~                                                                                                               [21;1H~                                                                                                               [22;1H~                                                                                                               [23;1H~                                                                                                               [24;1H~                                                                                                               [25;1H~                                                                                                               [26;1H~                                                                                                               [27;1H~                                                                                                               [28;1H~                                                                                                               [29;1H~                                                                                                               [30;1H~                                                                                                               [m[31;95H1,0-1[9CAll[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[2;1H[38;5;130mFROM [mUbuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mCMD [m[[31m"apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                                                               [9;1H~                                                                                                               [10;1H~                                                                                                               [11;1H~                                                                                                               [12;1H~                                                                                                               [13;1H~                                                                                                               [14;1H~                                                                                                               [15;1H~                                                                                                               [16;1H~                                                                                                               [17;1H~                                                                                                               [18;1H~                                                                                                               [19;1H~                                                                                                               [20;1H~                                                                                                               [21;1H~                                                                                                               [22;1H~                                                                                                               [23;1H~                                                                                                               [24;1H~                                                                                                               [25;1H~                                                                                                               [26;1H~                                                                                                               [27;1H~                                                                                                               [28;1H~                                                                                                               [29;1H~                                                                                                               [30;1H~                                                                                                               [m[31;95H1,0-1[9CAll"Dockerfile" 7L, 222C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[31;1H[1m-- INSERT --[m[31;14H[K[31;95H1,1[11CAll[1;1H[?12l[?25h[?25l[31;95H2[2;1H[?12l[?25h[?25l[31;97H2[2;2H[?12l[?25h[?25l[31;97H3[2;3H[?12l[?25h[?25l[31;97H4[2;4H[?12l[?25h[?25l[31;97H5[2;5H[?12l[?25h[?25l[31;97H6[2;6H[?12l[?25h[?25l[31;97H7[2;7H[?12l[?25h[?25lbuntu:14.04[2;17H[K[31;97H6[2;6H[?12l[?25h[?25lubuntu:14.04[31;97H7[2;7H[?12l[?25h[31;1H[K[2;6H[?25l[31;95H2,6[11CAll[2;6H[?12l[?25h[?25l[31;95H[K[31;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 7L, 222C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi[K[Kvi Dockerfile docker image lsbuild -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  6.685MBSending build context to Docker daemon  16.15MBSending build context to Docker daemon  26.74MBSending build context to Docker daemon  36.21MBSending build context to Docker daemon  43.45MBSending build context to Docker daemon  51.25MBSending build context to Docker daemon  59.05MBSending build context to Docker daemon  64.62MBSending build context to Docker daemon   75.2MBSending build context to Docker daemon  84.12MBSending build context to Docker daemon  89.69MBSending build context to Docker daemon  93.59MBSending build context to Docker daemon  94.59MB
+Step 1/6 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/6 : WORKDIR /opt/java
+Removing intermediate container 2a64722fe51e
+ ---> 566ff94efc0f
+Step 3/6 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> e1e865edcd4d
+Step 4/6 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> 4af2856a7b11
+Step 5/6 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> 6954dd5a1dce
+Step 6/6 : CMD ["apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Running in c466f37247cb
+Removing intermediate container c466f37247cb
+ ---> b7d11ea9954a
+Successfully built b7d11ea9954a
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi do[K[KDockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 7L, 222C[>c[27m[23m[m[H[2J[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mCMD [m[[31m"apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                                                               [9;1H~                                                                                                               [10;1H~                                                                                                               [11;1H~                                                                                                               [12;1H~                                                                                                               [13;1H~                                                                                                               [14;1H~                                                                                                               [15;1H~                                                                                                               [16;1H~                                                                                                               [17;1H~                                                                                                               [18;1H~                                                                                                               [19;1H~                                                                                                               [20;1H~                                                                                                               [21;1H~                                                                                                               [22;1H~                                                                                                               [23;1H~                                                                                                               [24;1H~                                                                                                               [25;1H~                                                                                                               [26;1H~                                                                                                               [27;1H~                                                                                                               [28;1H~                                                                                                               [29;1H~                                                                                                               [30;1H~                                                                                                               [m[31;95H1,0-1[9CAll"Dockerfile" 7L, 222C[73C     [9C   [1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[31;1H[1m-- INSERT --[m[31;14H[K[31;95H1,1[11CAll[1;1H[?12l[?25h[?25l[31;95H2[2;1H[?12l[?25h[?25l[31;95H3[3;1H[?12l[?25h[?25l[31;95H4[4;1H[?12l[?25h[?25l[31;95H3[3;1H[?12l[?25h[?25l[31;97H2[3;2H[?12l[?25h[?25l[31;97H3[3;3H[?12l[?25h[?25l[31;97H4[3;4H[?12l[?25h[?25l[31;97H5[3;5H[?12l[?25h[?25l[31;97H6[3;6H[?12l[?25h[?25l[31;97H7[3;7H[?12l[?25h[?25l[31;97H8[3;8H[?12l[?25h[?25l[31;97H9[3;9H[?12l[?25h[?25l[31;97H10[3;10H[?12l[?25h[?25l[31;98H1[3;11H[?12l[?25h[?25l[31;98H2[3;12H[?12l[?25h[?25l[31;98H3[3;13H[?12l[?25h[?25l[31;98H4[3;14H[?12l[?25h[?25l[31;98H5[3;15H[?12l[?25h[?25l[31;98H6[3;16H[?12l[?25h[?25l[31;98H7[3;17H[?12l[?25h[?25l[31;98H8[3;18H[?12l[?25h[?25l[4;30r[4;1H[L[1;31r[31;95H[K[31;95H4,1[11CAll[4;1H[?12l[?25h[?25lE[31;97H2[4;2H[?12l[?25h[?25lN[31;97H3[4;3H[?12l[?25h[?25lV[31;97H4[4;4H[?12l[?25h[?25l[38;5;130mENV [m[31;97H5[4;5H[?12l[?25h[?25lJ[31;97H6[4;6H[?12l[?25h[?25lA[31;97H7[4;7H[?12l[?25h[?25lV[31;97H8[4;8H[?12l[?25h[?25lA[31;97H9[4;9H[?12l[?25h[?25l_[31;97H10[4;10H[?12l[?25h[?25lH[31;98H1[4;11H[?12l[?25h[?25lO[31;98H2[4;12H[?12l[?25h[?25lM[31;98H3[4;13H[?12l[?25h[?25lE[31;98H4[4;14H[?12l[?25h[?25l[31;98H5[4;15H[?12l[?25h[?25l/[31;98H6[4;16H[?12l[?25h[?25lo[31;98H7[4;17H[?12l[?25h[?25lp[31;98H8[4;18H[?12l[?25h[?25lt[31;98H9[4;19H[?12l[?25h[?25l/[31;97H20[4;20H[?12l[?25h[?25lj[31;98H1[4;21H[?12l[?25h[?25la[31;98H2[4;22H[?12l[?25h[?25lv[31;98H3[4;23H[?12l[?25h[?25la[31;98H4[4;24H[?12l[?25h[?25l/[31;98H5[4;25H[?12l[?25h[?25l[4;24H[K[31;98H4[4;24H[?12l[?25h[?25l[4;23H[K[31;98H3[4;23H[?12l[?25h[?25l[4;22H[K[31;98H2[4;22H[?12l[?25h[?25l[4;21H[K[31;98H1[4;21H[?12l[?25h[?25l[4;20H[K[31;98H0[4;20H[?12l[?25h[?25l[4;19H[K[31;97H19[4;19H[?12l[?25h[?25l[4;18H[K[31;98H8[4;18H[?12l[?25h[?25l[4;17H[K[31;98H7[4;17H[?12l[?25h[?25l[4;16H[K[31;98H6[4;16H[?12l[?25h[?25l[4;15H[K[31;98H5[4;15H[?12l[?25h[?25l[31;98H4[4;14H[?12l[?25h[?25l[4;13H[K[31;98H3[4;13H[?12l[?25h[?25l[4;12H[K[31;98H2[4;12H[?12l[?25h[?25l[4;11H[K[31;98H1[4;11H[?12l[?25h[?25l[4;10H[K[31;98H0[4;10H[?12l[?25h[?25l[4;9H[K[31;97H9 [4;9H[?12l[?25h[?25l[4;8H[K[31;97H8[4;8H[?12l[?25h[?25l[4;7H[K[31;97H7[4;7H[?12l[?25h[?25l[4;6H[K[31;97H6[4;6H[?12l[?25h[?25l[4;5H[K[31;97H5[4;5H[?12l[?25h[?25lENV[4;4H[K[31;97H4[4;4H[?12l[?25h[?25l[4;3H[K[31;97H3[4;3H[?12l[?25h[?25l[4;2H[K[31;97H2[4;2H[?12l[?25h[?25l[4;1H[K[31;97H1[4;1H[?12l[?25h[?25l[3;30r[30;1H
+[1;31r[3;1H[38;5;130mWORKDIR [m/opt/java[30;1H[94m~                                                                                                               [m[31;95H[K[31;95H3,18[10CAll[3;18H[?12l[?25h[?25l[3;17H[K[31;98H7[3;17H[?12l[?25h[?25l[34m^Z[m[31;98H8-19[3;19H[?12l[?25h[?25l[3;17H[K[31;98H7   [3;17H[?12l[?25h[?25l[3;16H[K[31;98H6[3;16H[?12l[?25h[?25lv[31;98H7[3;17H[?12l[?25h[?25la[31;98H8[3;18H[?12l[?25h[31;1H[K[3;17H[?25l[31;95H3,17[10CAll[3;17H[?12l[?25h[?25l[31;95H[K[31;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[31;1H[K[31;1H[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker run -it dco[K[K[K[K java-appapp[K[K[K
+Neither the JAVA_HOME nor the JRE_HOME environment variable is defined
+At least one of these environment variable is needed to run this program
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 7L, 222C[>c[27m[23m[m[H[2J[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mCMD [m[[31m"apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [9;1H~                                                                             [10;1H~                                                                             [11;1H~                                                                             [12;1H~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll"Dockerfile" 7L, 222C[39C     [9C   [1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[31;1H[1m-- INSERT --[m[31;14H[K[31;61H1,1[11CAll[1;1H[?12l[?25h[?25l[31;61H2[2;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;63H2[3;2H[?12l[?25h[?25l[31;63H3[3;3H[?12l[?25h[?25l[31;63H4[3;4H[?12l[?25h[?25l[31;63H5[3;5H[?12l[?25h[?25l[31;63H6[3;6H[?12l[?25h[?25l[31;63H7[3;7H[?12l[?25h[?25l[31;63H8[3;8H[?12l[?25h[?25l[31;63H9[3;9H[?12l[?25h[?25l[31;63H10[3;10H[?12l[?25h[?25l[31;64H1[3;11H[?12l[?25h[?25l[31;64H2[3;12H[?12l[?25h[?25l[31;64H3[3;13H[?12l[?25h[?25l[31;64H4[3;14H[?12l[?25h[?25l[31;64H5[3;15H[?12l[?25h[?25l[31;64H6[3;16H[?12l[?25h[?25l[31;64H7[3;17H[?12l[?25h[?25l[31;64H8[3;18H[?12l[?25h[?25l[4;30r[4;1H[L[1;31r[31;61H[K[31;61H4,1[11CAll[4;1H[?12l[?25h[?25lE[31;63H2[4;2H[?12l[?25h[?25lN[31;63H3[4;3H[?12l[?25h[?25lV[31;63H4[4;4H[?12l[?25h[?25l[38;5;130mENV [m[31;63H5[4;5H[?12l[?25h[?25lJ[31;63H6[4;6H[?12l[?25h[?25lA[31;63H7[4;7H[?12l[?25h[?25lV[31;63H8[4;8H[?12l[?25h[?25lAS[31;63H10[4;10H[?12l[?25h[?25l[4;9H[K[31;63H9 [4;9H[?12l[?25h[?25l_[31;63H10[4;10H[?12l[?25h[?25lH[31;64H1[4;11H[?12l[?25h[?25lI[31;64H2[4;12H[?12l[?25h[?25l[4;11H[K[31;64H1[4;11H[?12l[?25h[?25lO[31;64H2[4;12H[?12l[?25h[?25lM[31;64H3[4;13H[?12l[?25h[?25lE[31;64H4[4;14H[?12l[?25h[?25l[31;64H5[4;15H[?12l[?25h[?25lo[31;64H6[4;16H[?12l[?25h[?25lp[31;64H7[4;17H[?12l[?25h[?25lt[31;64H8[4;18H[?12l[?25h[?25l[4;17H[K[31;64H7[4;17H[?12l[?25h[?25l[4;16H[K[31;64H6[4;16H[?12l[?25h[?25l[4;15H[K[31;64H5[4;15H[?12l[?25h[?25l/[31;64H6[4;16H[?12l[?25h[?25lo[31;64H7[4;17H[?12l[?25h[?25lp[31;64H8[4;18H[?12l[?25h[?25lt[31;64H9[4;19H[?12l[?25h[?25l/[31;63H20[4;20H[?12l[?25h[?25lj[31;64H1[4;21H[?12l[?25h[?25la[31;64H2[4;22H[?12l[?25h[?25lv[31;64H3[4;23H[?12l[?25h[?25la[31;64H4[4;24H[?12l[?25h[?25l/[31;64H5[4;25H[?12l[?25h[?25lj[31;64H6[4;26H[?12l[?25h[?25ld[31;64H7[4;27H[?12l[?25h[?25lk[31;64H8[4;28H[?12l[?25h[?25l[4;27H[K[31;64H7[4;27H[?12l[?25h[?25l[4;26H[K[31;64H6[4;26H[?12l[?25h[?25l[4;25H[K[31;64H5[4;25H[?12l[?25h[?25l[5;30r[5;1H[L[1;31r[4;25Hjdk1.8.0_191[31;61H[K[31;61H5,1[11CAll[5;1H[?12l[?25h[?25l[4;30r[30;1H
+[1;31r[4;1H[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191[30;1H[94m~                                                                             [m[31;61H[K[31;61H4,37[10CAll[4;37H[?12l[?25h[?25l[5;30r[5;1H[L[1;31r[31;61H[K[31;61H5,1[11CAll[5;1H[?12l[?25h[?25lE[31;63H2[5;2H[?12l[?25h[?25lN[31;63H3[5;3H[?12l[?25h[?25lV[31;63H4[5;4H[?12l[?25h[?25l[38;5;130mENV [m[31;63H5[5;5H[?12l[?25h[?25lP[31;63H6[5;6H[?12l[?25h[?25lA[31;63H7[5;7H[?12l[?25h[?25lT[31;63H8[5;8H[?12l[?25h[?25lH[31;63H9[5;9H[?12l[?25h[?25l[31;63H10[5;10H[?12l[?25h[?25l$[31;64H1[5;11H[?12l[?25h[?25lP[31;64H2[5;12H[?12l[?25h[?25lA[31;64H3[5;13H[?12l[?25h[?25lT[31;64H4[5;14H[?12l[?25h[?25lH[31;64H5[5;15H[?12l[?25h[?25l:[31;64H6[5;16H[?12l[?25h[?25l$[31;64H7[5;17H[?12l[?25h[?25lJ[31;64H8[5;18H[?12l[?25h[?25lA[31;64H9[5;19H[?12l[?25h[?25lV[31;63H20[5;20H[?12l[?25h[?25lA[31;64H1[5;21H[?12l[?25h[?25l_[31;64H2[5;22H[?12l[?25h[?25lH[31;64H3[5;23H[?12l[?25h[?25lO[31;64H4[5;24H[?12l[?25h[?25lM[31;64H5[5;25H[?12l[?25h[?25lE[31;64H6[5;26H[?12l[?25h[?25l/[31;64H7[5;27H[?12l[?25h[?25lb[31;64H8[5;28H[?12l[?25h[?25li[31;64H9[5;29H[?12l[?25h[?25ln[31;63H30[5;30H[?12l[?25h[?25l[6;30r[6;1H[L[1;31r[31;61H[K[31;61H6,1[11CAll[6;1H[?12l[?25h[?25lW[31;63H2[6;2H[?12l[?25h[?25lO[31;63H3[6;3H[?12l[?25h[?25lK[31;63H4[6;4H[?12l[?25h[?25lD[31;63H5[6;5H[?12l[?25h[?25lI[31;63H6[6;6H[?12l[?25h[?25lR[31;63H7[6;7H[?12l[?25h[?25l[31;63H8[6;8H[?12l[?25h[?25l[31;63H7[6;7H[?12l[?25h[?25l[31;63H6[6;6H[?12l[?25h[?25l[31;63H5[6;5H[?12l[?25h[?25l[31;63H4[6;4H[?12l[?25h[?25l[31;63H3[6;3H[?12l[?25h[?25l[38;5;130mWORKDIR [m[31;63H4[6;4H[?12l[?25h[?25l[31;63H5[6;5H[?12l[?25h[?25l[31;63H6[6;6H[?12l[?25h[?25l[31;63H7[6;7H[?12l[?25h[?25l[31;63H8[6;8H[?12l[?25h[?25l[31;63H9[6;9H[?12l[?25h[?25l/[31;63H10[6;10H[?12l[?25h[?25lo[31;64H1[6;11H[?12l[?25h[?25lp[31;64H2[6;12H[?12l[?25h[?25lt[31;64H3[6;13H[?12l[?25h[?25l/[31;64H4[6;14H[?12l[?25h[?25lw[31;64H5[6;15H[?12l[?25h[?25le[31;64H6[6;16H[?12l[?25h[?25lb[31;64H7[6;17H[?12l[?25h[?25la[31;64H8[6;18H[?12l[?25h[?25lp[31;64H9[6;19H[?12l[?25h[?25lp[31;63H20[6;20H[?12l[?25h[?25l[31;61H5[5;20H[?12l[?25h[?25l[31;61H4[4;20H[?12l[?25h[?25l[31;61H3,18[3;18H[?12l[?25h[?25l[4;30r[4;1H[L[1;31r[31;61H[K[31;61H4,1[11CAll[4;1H[?12l[?25h[?25l[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .[31;63H33[4;33H[?12l[?25h[?25l[31;61H5[5;33H[?12l[?25h[?25l[31;61H6,30[6;30H[?12l[?25h[?25l[31;61H7,2[7;20H[?12l[?25h[?25l[31;61H8,33[8;33H[?12l[?25h[?25l[31;61H9[9;33H[?12l[?25h[?25l[9;32H[K[31;64H2[9;32H[?12l[?25h[?25l[31;64H1[9;31H[?12l[?25h[?25l[9;30H[K[31;64H0[9;30H[?12l[?25h[?25l[9;29H[K[31;63H29[9;29H[?12l[?25h[?25l[9;28H[K[31;64H8[9;28H[?12l[?25h[?25l[9;27H[K[31;64H7[9;27H[?12l[?25h[?25l[9;26H[K[31;64H6[9;26H[?12l[?25h[?25l[9;25H[K[31;64H5[9;25H[?12l[?25h[?25l[9;24H[K[31;64H4[9;24H[?12l[?25h[?25l[9;23H[K[31;64H3[9;23H[?12l[?25h[?25l[9;22H[K[31;64H2[9;22H[?12l[?25h[?25l[9;21H[K[31;64H1[9;21H[?12l[?25h[?25l[9;20H[K[31;64H0[9;20H[?12l[?25h[?25l[9;19H[K[31;63H19[9;19H[?12l[?25h[?25l[9;18H[K[31;64H8[9;18H[?12l[?25h[?25l[9;17H[K[31;64H7[9;17H[?12l[?25h[?25l[9;16H[K[31;64H6[9;16H[?12l[?25h[?25l[9;15H[K[31;64H5[9;15H[?12l[?25h[?25l[9;14H[K[31;64H4[9;14H[?12l[?25h[?25l[9;13H[K[31;64H3[9;13H[?12l[?25h[?25l[9;12H[K[31;64H2[9;12H[?12l[?25h[?25l[9;11H[K[31;64H1[9;11H[?12l[?25h[?25l[9;10H[K[31;64H0[9;10H[?12l[?25h[?25l[9;9H[K[31;63H9 [9;9H[?12l[?25h[?25l[9;8H[K[31;63H8[9;8H[?12l[?25h[?25l[9;7H[K[31;63H7[9;7H[?12l[?25h[?25l[9;6H[K[31;63H6[9;6H[?12l[?25h[?25l[9;5H[K[31;63H5[9;5H[?12l[?25h[?25lADD[9;4H[K[31;63H4[9;4H[?12l[?25h[?25l[9;3H[K[31;63H3[9;3H[?12l[?25h[?25l[9;2H[K[31;63H2[9;2H[?12l[?25h[?25l[9;1H[K[31;63H1[9;1H[?12l[?25h[?25l[8;30r[30;1H
+[1;31r[8;1H[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .[30;1H[94m~                                                                             [m[31;61H[K[31;61H8,34[10CAll[8;34H[?12l[?25h[?25l[31;61H9[9;34H[?12l[?25h[?25l[31;64H5[9;35H[?12l[?25h[?25l[31;64H6[9;36H[?12l[?25h[?25l[31;64H7[9;37H[?12l[?25h[?25l[31;64H8[9;38H[?12l[?25h[?25l[31;64H9[9;39H[?12l[?25h[?25l[31;63H40[9;40H[?12l[?25h[?25l[31;64H1[9;41H[?12l[?25h[?25l[31;64H2[9;42H[?12l[?25h[?25l[31;64H3[9;43H[?12l[?25h[?25l[31;64H4[9;44H[?12l[?25h[?25l[31;64H5[9;45H[?12l[?25h[?25l[31;64H6[9;46H[?12l[?25h[?25l[31;64H7[9;47H[?12l[?25h[?25l[31;64H8[9;48H[?12l[?25h[?25l[31;64H9[9;49H[?12l[?25h[?25l[31;63H50[9;50H[?12l[?25h[?25l[31;64H1[9;51H[?12l[?25h[?25l[31;64H2[9;52H[?12l[?25h[?25l[31;64H3[9;53H[?12l[?25h[?25l[31;64H4[9;54H[?12l[?25h[?25l[31;64H5[9;55H[?12l[?25h[?25l[31;64H6[9;56H[?12l[?25h[?25l[31;64H7[9;57H[?12l[?25h[?25l[31;64H8[9;58H[?12l[?25h[?25l[31;64H9[9;59H[?12l[?25h[?25l[31;63H60[9;60H[?12l[?25h[?25l[31;64H1[9;61H[?12l[?25h[?25l[31;64H2[9;62H[?12l[?25h[?25l[31;64H3[9;63H[?12l[?25h[?25l[31;64H4[9;64H[?12l[?25h[?25l[31;64H5[9;65H[?12l[?25h[?25l[31;64H6[9;66H[?12l[?25h[?25l[31;64H7[9;67H[?12l[?25h[?25l[10;30r[10;1H[L[1;31r[31;61H[K[31;61H10,1[10CAll[10;1H[?12l[?25h[?25lE[31;64H2[10;2H[?12l[?25h[?25lX[31;64H3[10;3H[?12l[?25h[?25lP[31;64H4[10;4H[?12l[?25h[?25lO[31;64H5[10;5H[?12l[?25h[?25lS[31;64H6[10;6H[?12l[?25h[?25lE[31;64H7[10;7H[?12l[?25h[?25l[38;5;130mEXPOSE [m[31;64H8[10;8H[?12l[?25h[?25l8[31;64H9[10;9H[?12l[?25h[?25l0[31;64H10[10;10H[?12l[?25h[?25l8[31;65H1[10;11H[?12l[?25h[?25l0[31;65H2[10;12H[?12l[?25h[?25l:[31;65H3[10;13H[?12l[?25h[?25l1[31;65H4[10;14H[?12l[?25h[?25l2[31;65H5[10;15H[?12l[?25h[?25l3[31;65H6[10;16H[?12l[?25h[?25l4[31;65H7[10;17H[?12l[?25h[?25l5[31;65H8[10;18H[?12l[?25h[?25l[31;62H1[11;18H[?12l[?25h[?25l[31;65H7[11;17H[?12l[?25h[?25l[31;65H6[11;16H[?12l[?25h[?25l[31;65H5[11;15H[?12l[?25h[?25l[31;65H4[11;14H[?12l[?25h[?25l[31;65H3[11;13H[?12l[?25h[?25l[31;65H2[11;12H[?12l[?25h[?25l[31;65H1[11;11H[?12l[?25h[?25l[31;65H0[11;10H[?12l[?25h[?25l[31;64H9 [11;9H[?12l[?25h[?25l[31;64H8[11;8H[?12l[?25h[?25l[31;64H7[11;7H[?12l[?25h[?25l[31m/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;64H8[11;8H[?12l[?25h[?25l[31moapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;64H9[11;9H[?12l[?25h[?25l[31mpapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;64H10[11;10H[?12l[?25h[?25l[31mtapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H1[11;11H[?12l[?25h[?25l[31m/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H2[11;12H[?12l[?25h[?25l[31mwapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H3[11;13H[?12l[?25h[?25l[31meapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H4[11;14H[?12l[?25h[?25l[31mbapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H5[11;15H[?12l[?25h[?25l[1C[31mapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H6[11;16H[?12l[?25h[?25l[31mpapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H7[11;17H[?12l[?25h[?25l[31mpapache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H8[11;18H[?12l[?25h[?25l[31m/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m][31;65H9[11;19H[?12l[?25h[31;1H[K[11;18H[?25l[31;61H11,18[9CAll[11;18H[?12l[?25h[?25l[31;61H[K[31;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 11L, 339C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile docker run -it java-app [10Pvi Dockerfile[Cdocker image build -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  1.671MBSending build context to Docker daemon  2.228MBSending build context to Docker daemon  2.785MBSending build context to Docker daemon  4.456MBSending build context to Docker daemon  6.685MBSending build context to Docker daemon  8.356MBSending build context to Docker daemon  10.03MBSending build context to Docker daemon   11.7MBSending build context to Docker daemon  12.81MBSending build context to Docker daemon  13.93MBSending build context to Docker daemon  16.71MBSending build context to Docker daemon  20.05MBSending build context to Docker daemon  21.73MBSending build context to Docker daemon  24.51MBSending build context to Docker daemon  28.41MBSending build context to Docker daemon  29.52MBSending build context to Docker daemon  32.87MBSending build context to Docker daemon  35.09MBSending build context to Docker daemon  38.99MBSending build context to Docker daemon  41.78MBSending build context to Docker daemon  44.56MBSending build context to Docker daemon  46.79MBSending build context to Docker daemon  47.91MBSending build context to Docker daemon  50.69MBSending build context to Docker daemon  52.36MBSending build context to Docker daemon  54.03MBSending build context to Docker daemon  56.26MBSending build context to Docker daemon  60.16MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon  62.39MBSending build context to Docker daemon  64.06MBSending build context to Docker daemon  66.29MBSending build context to Docker daemon  69.07MBSending build context to Docker daemon  70.19MBSending build context to Docker daemon  71.86MBSending build context to Docker daemon  74.65MBSending build context to Docker daemon  76.87MBSending build context to Docker daemon     83MBSending build context to Docker daemon  91.36MBSending build context to Docker daemon  94.14MBSending build context to Docker daemon  94.62MB
+Step 1/10 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/10 : WORKDIR /opt/java
+ ---> Using cache
+ ---> 566ff94efc0f
+Step 3/10 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> 49845cfc1cfe
+Step 4/10 : ENV JAVA_HOME /opt/java/jdk1.8.0_191
+ ---> Running in 3147becd3939
+Removing intermediate container 3147becd3939
+ ---> c4be8799cf85
+Step 5/10 : ENV PATH $PATH:$JAVA_HOME/bin
+ ---> Running in 2004eb0ab6a2
+Removing intermediate container 2004eb0ab6a2
+ ---> af482e62eea2
+Step 6/10 : WORKDIR /opt/webapp
+Removing intermediate container 1e334eb89e37
+ ---> 753dfec556a6
+Step 7/10 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> b25ca0067eab
+Step 8/10 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> a47d929d45cd
+Step 9/10 : EXPOSE 8080:12345
+ ---> Running in 07afc9ad8f91
+Removing intermediate container 07afc9ad8f91
+ ---> 5d235593dbf9
+Step 10/10 : CMD ["/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Running in 5be1ad6a3cec
+Removing intermediate container 5be1ad6a3cec
+ ---> 242c7c01db7d
+Successfully built 242c7c01db7d
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .[18Pvi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 11L, 339C[>c[27m[23m[m[H[2J[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080:12345
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll"Dockerfile" 11L, 339C[38C     [9C   [1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[31;61H2,1[11CAll[2;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;61H6[6;1H[?12l[?25h[?25l[31;61H7[7;1H[?12l[?25h[?25l[31;61H8[8;1H[?12l[?25h[?25l[31;61H9[9;1H[?12l[?25h[?25l[31;61H10,1[10;1H[?12l[?25h[?25l[31;64H2[10;2H[?12l[?25h[?25l[31;64H3[10;3H[?12l[?25h[?25l[31;64H4[10;4H[?12l[?25h[?25l[31;64H5[10;5H[?12l[?25h[?25l[31;64H6[10;6H[?12l[?25h[?25l[31;64H7[10;7H[?12l[?25h[?25l[31;64H8[10;8H[?12l[?25h[?25l[31;64H9[10;9H[?12l[?25h[?25l[31;64H10[10;10H[?12l[?25h[?25l[31;65H1[10;11H[?12l[?25h[?25l[31;65H2[10;12H[?12l[?25h[?25l[31;65H3[10;13H[?12l[?25h[?25l[31;65H4[10;14H[?12l[?25h[?25l[31;65H5[10;15H[?12l[?25h[?25l[31;65H6[10;16H[?12l[?25h[?25l[31;65H7[10;17H[?12l[?25h[?25l[31;1H[1m-- INSERT --[m[31;14H[K[31;61H10,17[9CAll[10;17H[?12l[?25h[?25l5[10;17H[K[31;65H6[10;16H[?12l[?25h[?25l[31;65H7[10;17H[?12l[?25h[?25l[10;16H[K[31;65H6[10;16H[?12l[?25h[?25l[10;15H[K[31;65H5[10;15H[?12l[?25h[?25l[10;14H[K[31;65H4[10;14H[?12l[?25h[?25l[10;13H[K[31;65H3[10;13H[?12l[?25h[?25l[10;12H[K[31;65H2[10;12H[?12l[?25h[31;1H[K[10;11H[?25l[31;61H10,11[9CAll[10;11H[?12l[?25h[?25l[31;61H[K[31;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 11L, 333C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile docker image build -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  3.899MBSending build context to Docker daemon  8.913MBSending build context to Docker daemon  12.81MBSending build context to Docker daemon  17.83MBSending build context to Docker daemon  20.05MBSending build context to Docker daemon  28.41MBSending build context to Docker daemon  33.98MBSending build context to Docker daemon  40.67MBSending build context to Docker daemon  43.45MBSending build context to Docker daemon  49.58MBSending build context to Docker daemon  55.71MBSending build context to Docker daemon  64.06MBSending build context to Docker daemon  71.86MBSending build context to Docker daemon  81.33MBSending build context to Docker daemon  87.46MBSending build context to Docker daemon  91.91MBSending build context to Docker daemon  94.63MB
+Step 1/10 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/10 : WORKDIR /opt/java
+ ---> Using cache
+ ---> 566ff94efc0f
+Step 3/10 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> Using cache
+ ---> 49845cfc1cfe
+Step 4/10 : ENV JAVA_HOME /opt/java/jdk1.8.0_191
+ ---> Using cache
+ ---> c4be8799cf85
+Step 5/10 : ENV PATH $PATH:$JAVA_HOME/bin
+ ---> Using cache
+ ---> af482e62eea2
+Step 6/10 : WORKDIR /opt/webapp
+ ---> Using cache
+ ---> 753dfec556a6
+Step 7/10 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> Using cache
+ ---> b25ca0067eab
+Step 8/10 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> Using cache
+ ---> a47d929d45cd
+Step 9/10 : EXPOSE 8080
+ ---> Running in d3d27b80931a
+Removing intermediate container d3d27b80931a
+ ---> 9f1ad35c70fb
+Step 10/10 : CMD ["/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Running in 1ade3e640df6
+Removing intermediate container 1ade3e640df6
+ ---> 3ffc655a36a4
+Successfully built 3ffc655a36a4
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container run -d -p 12345:8080  webapp[K[K[K[K[K[Kjava-a[[[K[Kpp
+5a0237df8e7baa7d964f112873f061b958ea3a610b4e83bbc93126c510f0a4bc
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker conrt[K[Ktainer ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+8fb9d0e311e4        a11b8875fe2e        "/bin/bash"         3 days ago          Up 3 days                               wizardly_minsky
+d5be1f0a7f85        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.2.yux3ki9b0uc3uys53gqqj1z9i
+3850153e2529        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.4.vfp70ws76q7pf43ud19sr7plz
+60cb57f4db98        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              sayhello2.1.pdwf7vnyshrfw99k9vgorusfe
+193ed935ec95        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.5.omf9058wudag98aa99c3f0a6l
+13208f75494c        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.3.t9p5tjy29ip2skyr2ftj6she0
+929d03d433f1        sayhello:latest     "python app.py"     3 days ago          Up 3 days           80/tcp              pyweb_PyApp.1.jmayxl19fmzzfr24wrhys5ka8
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container lsrun -d -p 12345:8080 jjava-app[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -p 12345:8080 ja[1Pva-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -p 12345:8080 jav[1Pa-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- -p 12345:8080 java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci -p 12345:8080 java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy -p 12345:8080 java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -p 12345:8080 j[1Pava-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct -p 12345:8080 java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Using CATALINA_BASE:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_HOME:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_TMPDIR: /opt/webapp/apache-tomcat-8.5.27/temp
+Using JRE_HOME:        /opt/java/jdk1.8.0_191
+Using CLASSPATH:       /opt/webapp/apache-tomcat-8.5.27/bin/bootstrap.jar:/opt/webapp/apache-tomcat-8.5.27/bin/tomcat-juli.jar
+/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh: 1: exec: /opt/java/jdk1.8.0_191/bin/java: not found
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container run -it -p 12345:8080  java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -d -p 12345:8080 jjava-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[6Pimage build -t java-app .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pvi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 11L, 333C[>c[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll"Dockerfile" 11L, 333C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[31;61H2,1  [2;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;63H2[5;2H[?12l[?25h[?25l[31;63H3[5;3H[?12l[?25h[?25l[31;63H4[5;4H[?12l[?25h[?25l[31;63H5[5;5H[?12l[?25h[?25l[31;63H6[5;6H[?12l[?25h[?25l[31;63H7[5;7H[?12l[?25h[?25l[31;63H8[5;8H[?12l[?25h[?25l[31;63H9[5;9H[?12l[?25h[?25l[31;63H10[5;10H[?12l[?25h[?25l[31;64H1[5;11H[?12l[?25h[?25l[31;64H2[5;12H[?12l[?25h[?25l[31;64H3[5;13H[?12l[?25h[?25l[31;64H4[5;14H[?12l[?25h[?25l[31;64H5[5;15H[?12l[?25h[?25l[31;64H6[5;16H[?12l[?25h[?25l[31;64H7[5;17H[?12l[?25h[?25l[31;64H8[5;18H[?12l[?25h[?25l[31;64H9[5;19H[?12l[?25h[?25l[31;63H20[5;20H[?12l[?25h[?25l[31;64H1[5;21H[?12l[?25h[?25l[31;64H2[5;22H[?12l[?25h[?25l[31;64H3[5;23H[?12l[?25h[?25l[31;61H6[6;23H[?12l[?25h[?25l[31;1H[K[31;1H:[?12l[?25hQ[?25l[?12l[?25h1[?25l[?12l[?25h[?25l[97m[41mE492: Not an editor command: Q1[m[29C6,23[10CAll[6;23H[?12l[?25h[?25l[31;1H[K[31;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[31;1H[K[31;1H[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;41r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[41;1H"Dockerfile" 11L, 333C[>c[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~                                                                                                                                             [31;1H~                                                                                                                                             [32;1H~                                                                                                                                             [33;1H~                                                                                                                                             [34;1H~                                                                                                                                             [35;1H~                                                                                                                                             [36;1H~                                                                                                                                             [37;1H~                                                                                                                                             [38;1H~                                                                                                                                             [39;1H~                                                                                                                                             [40;1H~                                                                                                                                             [m[41;125H1,0-1[9CAll[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~                                                                                                                                             [31;1H~                                                                                                                                             [32;1H~                                                                                                                                             [33;1H~                                                                                                                                             [34;1H~                                                                                                                                             [35;1H~                                                                                                                                             [36;1H~                                                                                                                                             [37;1H~                                                                                                                                             [38;1H~                                                                                                                                             [39;1H~                                                                                                                                             [40;1H~                                                                                                                                             [m[41;125H1,0-1[9CAll"Dockerfile" 11L, 333C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[41;125H2,1  [2;1H[?12l[?25h[?25l[41;125H3[3;1H[?12l[?25h[?25l[41;125H4[4;1H[?12l[?25h[?25l[41;125H5[5;1H[?12l[?25h[?25l[41;125H6[6;1H[?12l[?25h[?25l[41;125H7[7;1H[?12l[?25h[?25l[41;125H8[8;1H[?12l[?25h[?25l[41;125H9[9;1H[?12l[?25h[?25l[41;125H10,1[10;1H[?12l[?25h[?25l[41;128H2[10;2H[?12l[?25h[?25l[41;128H3[10;3H[?12l[?25h[?25l[41;128H4[10;4H[?12l[?25h[?25l[41;128H5[10;5H[?12l[?25h[?25l[41;128H6[10;6H[?12l[?25h[?25l[41;128H7[10;7H[?12l[?25h[?25l[41;125H9,7 [9;7H[?12l[?25h[?25l[41;125H8[8;7H[?12l[?25h[?25l[41;125H7[7;7H[?12l[?25h[?25l[41;125H6[6;7H[?12l[?25h[?25l[41;125H5[5;7H[?12l[?25h[?25l[41;127H8[5;8H[?12l[?25h[?25l[41;127H9[5;9H[?12l[?25h[?25l[41;127H10[5;10H[?12l[?25h[?25l[41;128H1[5;11H[?12l[?25h[?25l[41;128H2[5;12H[?12l[?25h[?25l[41;128H3[5;13H[?12l[?25h[?25l[41;128H4[5;14H[?12l[?25h[?25l[41;128H5[5;15H[?12l[?25h[?25l[41;128H6[5;16H[?12l[?25h[?25l[41;128H7[5;17H[?12l[?25h[?25l[41;125H6[6;17H[?12l[?25h[?25l[41;1H[K[41;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 11L, 333C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile docker container run -it -p 12345:8080 java-appls[Krun -d -p 12345:8080 java-app[14Pimage build -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  6.128MBSending build context to Docker daemon   11.7MBSending build context to Docker daemon  20.05MBSending build context to Docker daemon  25.62MBSending build context to Docker daemon  29.52MBSending build context to Docker daemon  33.42MBSending build context to Docker daemon  41.22MBSending build context to Docker daemon  48.46MBSending build context to Docker daemon  56.26MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon  68.52MBSending build context to Docker daemon  74.65MBSending build context to Docker daemon  81.33MBSending build context to Docker daemon  84.67MBSending build context to Docker daemon  89.13MBSending build context to Docker daemon  94.65MB
+Step 1/10 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/10 : WORKDIR /opt/java
+ ---> Using cache
+ ---> 566ff94efc0f
+Step 3/10 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> Using cache
+ ---> 49845cfc1cfe
+Step 4/10 : ENV JAVA_HOME /opt/java/jdk1.8.0_191
+ ---> Using cache
+ ---> c4be8799cf85
+Step 5/10 : ENV PATH $PATH:$JAVA_HOME/bin
+ ---> Using cache
+ ---> af482e62eea2
+Step 6/10 : WORKDIR /opt/webapp
+ ---> Using cache
+ ---> 753dfec556a6
+Step 7/10 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> Using cache
+ ---> b25ca0067eab
+Step 8/10 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> Using cache
+ ---> a47d929d45cd
+Step 9/10 : EXPOSE 8080
+ ---> Using cache
+ ---> 9f1ad35c70fb
+Step 10/10 : CMD ["/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Using cache
+ ---> 3ffc655a36a4
+Successfully built 3ffc655a36a4
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .[18Pvi Dockerfile docker container run -it -p 12345:8080 java-app
+Using CATALINA_BASE:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_HOME:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_TMPDIR: /opt/webapp/apache-tomcat-8.5.27/temp
+Using JRE_HOME:        /opt/java/jdk1.8.0_191
+Using CLASSPATH:       /opt/webapp/apache-tomcat-8.5.27/bin/bootstrap.jar:/opt/webapp/apache-tomcat-8.5.27/bin/tomcat-juli.jar
+/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh: 1: exec: /opt/java/jdk1.8.0_191/bin/java: not found
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container run -it -p 12345:8080  java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[6Pimage build -t java-app .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pvi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H"Dockerfile" 11L, 333C[>c[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll"Dockerfile" 11L, 333C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[31;1H[1m-- INSERT --[m[31;14H[K[31;61H1,1[11CAll[1;1H[?12l[?25h[?25l[31;61H2[2;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;63H2[5;2H[?12l[?25h[?25l[31;63H3[5;3H[?12l[?25h[?25l[31;63H4[5;4H[?12l[?25h[?25l[31;63H5[5;5H[?12l[?25h[?25l[31;63H6[5;6H[?12l[?25h[?25l[31;63H7[5;7H[?12l[?25h[?25l[31;63H8[5;8H[?12l[?25h[?25l[31;63H9[5;9H[?12l[?25h[?25l[31;63H10[5;10H[?12l[?25h[?25l[31;64H1[5;11H[?12l[?25h[?25l[31;64H2[5;12H[?12l[?25h[?25l[31;64H3[5;13H[?12l[?25h[?25l[31;64H4[5;14H[?12l[?25h[?25l[31;64H5[5;15H[?12l[?25h[?25l[31;64H6[5;16H[?12l[?25h[?25l[31;64H7[5;17H[?12l[?25h[?25l[31;64H8[5;18H[?12l[?25h[?25l[31;64H9[5;19H[?12l[?25h[?25l[31;63H20[5;20H[?12l[?25h[?25l[31;64H1[5;21H[?12l[?25h[?25l[31;64H2[5;22H[?12l[?25h[?25l[31;64H3[5;23H[?12l[?25h[?25l[31;64H4[5;24H[?12l[?25h[?25l[31;64H5[5;25H[?12l[?25h[?25l[31;64H6[5;26H[?12l[?25h[?25l[31;64H7[5;27H[?12l[?25h[?25l[31;64H8[5;28H[?12l[?25h[?25l[31;64H9[5;29H[?12l[?25h[?25l[31;63H30[5;30H[?12l[?25h[?25l[31;64H1[5;31H[?12l[?25h[?25l[31;64H2[5;32H[?12l[?25h[?25l[31;64H3[5;33H[?12l[?25h[?25l[31;64H4[5;34H[?12l[?25h[?25l[31;64H5[5;35H[?12l[?25h[?25l[31;64H6[5;36H[?12l[?25h[?25l[31;64H7[5;37H[?12l[?25h[?25l[5;36H[K[31;64H6[5;36H[?12l[?25h[?25l1[31;64H7[5;37H[?12l[?25h[?25l[5;36H[K[31;64H6[5;36H[?12l[?25h[?25l[5;35H[K[31;64H5[5;35H[?12l[?25h[?25l[5;34H[K[31;64H4[5;34H[?12l[?25h[?25l[5;33H[K[31;64H3[5;33H[?12l[?25h[?25l[5;32H[K[31;64H2[5;32H[?12l[?25h[?25l[5;31H[K[31;64H1[5;31H[?12l[?25h[?25l[5;30H[K[31;64H0[5;30H[?12l[?25h[?25l[5;29H[K[31;63H29[5;29H[?12l[?25h[?25l[5;28H[K[31;64H8[5;28H[?12l[?25h[?25l[5;27H[K[31;64H7[5;27H[?12l[?25h[?25l[5;26H[K[31;64H6[5;26H[?12l[?25h[?25l[5;25H[K[31;64H5[5;25H[?12l[?25h[?25ljdk1.8.0_191[31;63H37[5;37H[?12l[?25h[?25l[31;61H6,30[6;30H[?12l[?25h[?25l[31;61H5,37[5;37H[?12l[?25h[?25l[31;64H6[5;36H[?12l[?25h[?25l[31;64H5[5;35H[?12l[?25h[?25l[31;64H4[5;34H[?12l[?25h[?25l[31;64H3[5;33H[?12l[?25h[?25l[31;64H2[5;32H[?12l[?25h[?25l[31;64H1[5;31H[?12l[?25h[?25l[31;64H0[5;30H[?12l[?25h[?25l[31;63H29[5;29H[?12l[?25h[?25l[31;64H8[5;28H[?12l[?25h[?25l[31;64H7[5;27H[?12l[?25h[?25l[31;64H6[5;26H[?12l[?25h[?25l[31;64H5[5;25H[?12l[?25h[?25l[31;64H4[5;24H[?12l[?25h[?25l[31;64H3[5;23H[?12l[?25h[?25l[31;64H2[5;22H[?12l[?25h[?25l[31;64H1[5;21H[?12l[?25h[?25l[31;64H0[5;20H[?12l[?25h[?25l[31;63H19[5;19H[?12l[?25h[?25l[31;64H8[5;18H[?12l[?25h[?25l[31;64H7[5;17H[?12l[?25h[?25l[31;64H6[5;16H[?12l[?25h[?25l[31;64H5[5;15H[?12l[?25h[?25l[31;64H4[5;14H[?12l[?25h[?25l[31;64H5[5;15H[?12l[?25h[?25l/opt/java/jdk1.8.0_191[5;36H[K[31;64H4[5;14H[?12l[?25h[?25l /opt/java/jdk1.8.0_191[31;64H5[5;15H[?12l[?25h[?25l[31;61H6[6;15H[?12l[?25h[?25l[31;64H6[6;16H[?12l[?25h[?25l[31;64H7[6;17H[?12l[?25h[?25l[31;64H8[6;18H[?12l[?25h[?25l[31;64H9[6;19H[?12l[?25h[?25l[31;63H20[6;20H[?12l[?25h[?25l[31;64H1[6;21H[?12l[?25h[?25l[31;64H2[6;22H[?12l[?25h[?25l[31;64H3[6;23H[?12l[?25h[?25l[31;64H4[6;24H[?12l[?25h[?25l[31;64H5[6;25H[?12l[?25h[?25l[31;64H6[6;26H[?12l[?25h[?25l[31;64H7[6;27H[?12l[?25h[?25l[31;64H8[6;28H[?12l[?25h[?25l[31;64H9[6;29H[?12l[?25h[?25l[31;63H30[6;30H[?12l[?25h[31;1H[K[6;29H[?25l[31;61H6,29[10CAll[6;29H[?12l[?25h[?25l[31;61H[K[31;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 11L, 333C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile docker container run -it -p 12345:8080  java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[6Pimage build -t java-app .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  8.356MBSending build context to Docker daemon  17.83MBSending build context to Docker daemon  28.97MBSending build context to Docker daemon  39.55MBSending build context to Docker daemon  48.46MBSending build context to Docker daemon  55.15MBSending build context to Docker daemon  60.72MBSending build context to Docker daemon  66.85MBSending build context to Docker daemon  76.87MBSending build context to Docker daemon  88.57MBSending build context to Docker daemon  94.66MB
+Step 1/10 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/10 : WORKDIR /opt/java
+ ---> Using cache
+ ---> 566ff94efc0f
+Step 3/10 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> Using cache
+ ---> 49845cfc1cfe
+Step 4/10 : ENV JAVA_HOME /opt/java/jdk1.8.0_191
+ ---> Using cache
+ ---> c4be8799cf85
+Step 5/10 : ENV PATH $PATH:$JAVA_HOME/bin
+ ---> Using cache
+ ---> af482e62eea2
+Step 6/10 : WORKDIR /opt/webapp
+ ---> Using cache
+ ---> 753dfec556a6
+Step 7/10 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> Using cache
+ ---> b25ca0067eab
+Step 8/10 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> Using cache
+ ---> a47d929d45cd
+Step 9/10 : EXPOSE 8080
+ ---> Using cache
+ ---> 9f1ad35c70fb
+Step 10/10 : CMD ["/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Using cache
+ ---> 3ffc655a36a4
+Successfully built 3ffc655a36a4
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .[18Pvi Dockerfile docker container run -it -p 12345:8080  java-app
+Using CATALINA_BASE:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_HOME:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_TMPDIR: /opt/webapp/apache-tomcat-8.5.27/temp
+Using JRE_HOME:        /opt/java/jdk1.8.0_191
+Using CLASSPATH:       /opt/webapp/apache-tomcat-8.5.27/bin/bootstrap.jar:/opt/webapp/apache-tomcat-8.5.27/bin/tomcat-juli.jar
+/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh: 1: exec: /opt/java/jdk1.8.0_191/bin/java: not found
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container run -it -p 12345:8080  java-app[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[Kc4be8799cf85
+
+]0;root@dba5f13b0912: /opt/javaroot@dba5f13b0912:/opt/java# 
+]0;root@dba5f13b0912: /opt/javaroot@dba5f13b0912:/opt/java# ls
+[0m[01;34mjre1.8.0_191[0m
+]0;root@dba5f13b0912: /opt/javaroot@dba5f13b0912:/opt/java# cd jre1.8.0_191/
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191root@dba5f13b0912:/opt/java/jre1.8.0_191# ls
+COPYRIGHT  THIRDPARTYLICENSEREADME-JAVAFX.txt  [0m[01;34mbin[0m  [01;34mplugin[0m
+LICENSE    THIRDPARTYLICENSEREADME.txt         [01;34mlib[0m  release
+README     Welcome.html                        [01;34mman[0m
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191root@dba5f13b0912:/opt/java/jre1.8.0_191# cd bin/
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191/binroot@dba5f13b0912:/opt/java/jre1.8.0_191/bin# ls
+[0m[01;36mControlPanel[0m  [01;32mjavaws[0m    [01;32mjjs[0m      [01;32morbd[0m     [01;32mpolicytool[0m  [01;32mrmiregistry[0m  [01;32mtnameserv[0m
+[01;32mjava[0m          [01;32mjcontrol[0m  [01;32mkeytool[0m  [01;32mpack200[0m  [01;32mrmid[0m        [01;32mservertool[0m   [01;32munpack200[0m
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191/binroot@dba5f13b0912:/opt/java/jre1.8.0_191/bin# pwd
+/opt/java/jre1.8.0_191/bin
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191/binroot@dba5f13b0912:/opt/java/jre1.8.0_191/bin# cd ..
+]0;root@dba5f13b0912: /opt/java/jre1.8.0_191root@dba5f13b0912:/opt/java/jre1.8.0_191# cd ..
+]0;root@dba5f13b0912: /opt/javaroot@dba5f13b0912:/opt/java# ls
+[0m[01;34mjre1.8.0_191[0m
+]0;root@dba5f13b0912: /opt/javaroot@dba5f13b0912:/opt/java# exit
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;31r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[31;1H[97m[41mE325: ATTENTION[m
+Found a swap file by the name ".Dockerfile.swp"
+[10Cowned by: osgdev   dated: Mon Apr 29 17:11:19 2019
+[9Cfile name: ~osgdev/dockerhandson/Dockerfile
+[10Cmodified: YES
+[9Cuser name: osgdev   host name: TG-Devops-OS067
+[8Cprocess ID: 20010 (still running)
+While opening file "Dockerfile"
+[13Cdated: Mon Apr 29 16:53:17 2019
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use ":recover" or "vim -r Dockerfile"
+    to recover the changes (see ":help recovery").
+    If you did this already, delete the swap file ".Dockerfile.swp"
+    to avoid this message.
+
+[32mSwap file ".Dockerfile.swp" already exists![m
+[32m[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort: [?12l[?25h[m[31;1H[K[31;1H
+[?25l[30;1H"Dockerfile" 11L, 333C[>c
+[32mPress ENTER or type command to continue[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[27m[23m[m[H[2J[?25l[2;1H[38;5;130mFROM [mubuntu:14.04
+[38;5;130mWORKDIR [m/opt/java
+[38;5;130mADD [mjre-8u191-linux-x64.tar.gz .
+[38;5;130mENV [mJAVA_HOME /opt/java/jdk1.8.0_191
+[38;5;130mENV [mPATH $PATH:$JAVA_HOME/bin
+[38;5;130mWORKDIR [m/opt/webapp
+[38;5;130mADD [mapache-tomcat-8.5.27.tar.gz .
+[38;5;130mCOPY [mILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+[38;5;130mEXPOSE [m8080
+[38;5;130mCMD [m[[31m"/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh"[m,[31m"run"[m]
+[94m~                                                                             [13;1H~                                                                             [14;1H~                                                                             [15;1H~                                                                             [16;1H~                                                                             [17;1H~                                                                             [18;1H~                                                                             [19;1H~                                                                             [20;1H~                                                                             [21;1H~                                                                             [22;1H~                                                                             [23;1H~                                                                             [24;1H~                                                                             [25;1H~                                                                             [26;1H~                                                                             [27;1H~                                                                             [28;1H~                                                                             [29;1H~                                                                             [30;1H~                                                                             [m[31;61H1,0-1[9CAll[1;1H[?12l[?25h[?25l[31;61H2,1  [2;1H[?12l[?25h[?25l[31;61H3[3;1H[?12l[?25h[?25l[31;61H4[4;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;61H6[6;1H[?12l[?25h[?25l[31;61H7[7;1H[?12l[?25h[?25l[31;61H8[8;1H[?12l[?25h[?25l[31;61H9[9;1H[?12l[?25h[?25l[31;61H8[8;1H[?12l[?25h[?25l[31;61H7[7;1H[?12l[?25h[?25l[31;61H6[6;1H[?12l[?25h[?25l[31;61H5[5;1H[?12l[?25h[?25l[31;63H2[5;2H[?12l[?25h[?25l[31;63H3[5;3H[?12l[?25h[?25l[31;63H4[5;4H[?12l[?25h[?25l[31;63H5[5;5H[?12l[?25h[?25l[31;63H6[5;6H[?12l[?25h[?25l[31;63H7[5;7H[?12l[?25h[?25l[31;63H8[5;8H[?12l[?25h[?25l[31;63H9[5;9H[?12l[?25h[?25l[31;63H10[5;10H[?12l[?25h[?25l[31;64H1[5;11H[?12l[?25h[?25l[31;64H2[5;12H[?12l[?25h[?25l[31;64H3[5;13H[?12l[?25h[?25l[31;64H4[5;14H[?12l[?25h[?25l[31;64H5[5;15H[?12l[?25h[?25l[31;64H6[5;16H[?12l[?25h[?25l[31;64H7[5;17H[?12l[?25h[?25l[31;64H8[5;18H[?12l[?25h[?25l[31;64H9[5;19H[?12l[?25h[?25l[31;63H20[5;20H[?12l[?25h[?25l[31;64H1[5;21H[?12l[?25h[?25l[31;64H2[5;22H[?12l[?25h[?25l[31;64H3[5;23H[?12l[?25h[?25l[31;64H4[5;24H[?12l[?25h[?25l[31;64H5[5;25H[?12l[?25h[?25l[31;64H6[5;26H[?12l[?25h[?25l[31;64H7[5;27H[?12l[?25h[?25l[31;64H8[5;28H[?12l[?25h[?25l[31;64H9[5;29H[?12l[?25h[?25l[31;63H30[5;30H[?12l[?25h[?25l[31;64H1[5;31H[?12l[?25h[?25l[31;64H2[5;32H[?12l[?25h[?25l[31;64H3[5;33H[?12l[?25h[?25l[31;64H4[5;34H[?12l[?25h[?25l[31;64H5[5;35H[?12l[?25h[?25l[31;64H6[5;36H[?12l[?25h[?25l[31;1H[1m-- INSERT --[m[31;61H[K[31;61H5,36[10CAll[5;36H[?12l[?25h[?25l[31;64H7[5;37H[?12l[?25h[?25l[5;36H[K[31;64H6[5;36H[?12l[?25h[?25l[5;35H[K[31;64H5[5;35H[?12l[?25h[?25l[5;34H[K[31;64H4[5;34H[?12l[?25h[?25l[5;33H[K[31;64H3[5;33H[?12l[?25h[?25l[5;32H[K[31;64H2[5;32H[?12l[?25h[?25l[5;31H[K[31;64H1[5;31H[?12l[?25h[?25l[5;30H[K[31;64H0[5;30H[?12l[?25h[?25l[5;29H[K[31;63H29[5;29H[?12l[?25h[?25l[5;28H[K[31;64H8[5;28H[?12l[?25h[?25l[5;27H[K[31;64H7[5;27H[?12l[?25h[?25l[5;26H[K[31;64H6[5;26H[?12l[?25h[?25l[5;25H[K[31;64H5[5;25H[?12l[?25h[?25l[6;30r[6;1H[L[1;31r[5;25Hjre1.8.0_191[31;61H[K[31;61H6,1[11CAll[6;1H[?12l[?25h[?25l[5;30r[30;1H
+[1;31r[5;1H[38;5;130mENV [mJAVA_HOME /opt/java/jre1.8.0_191[30;1H[94m~                                                                             [m[31;61H[K[31;61H5,37[10CAll[5;37H[?12l[?25h[31;1H[K[5;36H[?25l[31;61H5,36[10CAll[5;36H[?12l[?25h[?25l[31;61H[K[31;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"Dockerfile" 11L, 333C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ vi Dockerfile docker container run -it c4be8799cf85[K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker container run -it c4be8799cf85-p 12345:8080 java-app[15Pimage build -t java-app .
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  3.342MBSending build context to Docker daemon  10.03MBSending build context to Docker daemon  12.26MBSending build context to Docker daemon  18.94MBSending build context to Docker daemon  26.74MBSending build context to Docker daemon  32.87MBSending build context to Docker daemon  35.65MBSending build context to Docker daemon  37.32MBSending build context to Docker daemon  38.99MBSending build context to Docker daemon  42.89MBSending build context to Docker daemon  51.25MBSending build context to Docker daemon  59.05MBSending build context to Docker daemon  65.73MBSending build context to Docker daemon  72.42MBSending build context to Docker daemon  78.54MBSending build context to Docker daemon  82.44MBSending build context to Docker daemon  88.57MBSending build context to Docker daemon  94.69MB
+Step 1/10 : FROM ubuntu:14.04
+ ---> 7e4b16ae8b23
+Step 2/10 : WORKDIR /opt/java
+ ---> Using cache
+ ---> 566ff94efc0f
+Step 3/10 : ADD jre-8u191-linux-x64.tar.gz .
+ ---> Using cache
+ ---> 49845cfc1cfe
+Step 4/10 : ENV JAVA_HOME /opt/java/jre1.8.0_191
+ ---> Running in f1cea60ae223
+Removing intermediate container f1cea60ae223
+ ---> 670d07ad344a
+Step 5/10 : ENV PATH $PATH:$JAVA_HOME/bin
+ ---> Running in 5dda9a8a0010
+Removing intermediate container 5dda9a8a0010
+ ---> 5e670d5a4025
+Step 6/10 : WORKDIR /opt/webapp
+Removing intermediate container 54dc2904b722
+ ---> 291a04042346
+Step 7/10 : ADD apache-tomcat-8.5.27.tar.gz .
+ ---> b49659c2782c
+Step 8/10 : COPY ILP-0.0.1-20190411.192309-16.war apache-tomcat-8.5.27/webapps
+ ---> 5096f2c86950
+Step 9/10 : EXPOSE 8080
+ ---> Running in efe3778a01f9
+Removing intermediate container efe3778a01f9
+ ---> e608818096b5
+Step 10/10 : CMD ["/opt/webapp/apache-tomcat-8.5.27/bin/catalina.sh","run"]
+ ---> Running in 6b093d16d915
+Removing intermediate container 6b093d16d915
+ ---> 60855a84f5ff
+Successfully built 60855a84f5ff
+Successfully tagged java-app:latest
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [K]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker image build -t java-app .[18Pvi Dockerfile docker container run -it c4be8799cf85-p 12345:8080  java-app[A]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ [C[C[C[C[C[C[C[6Pimage build -t java-app .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccontainer run -it -p 12345:8080  java-app
+Using CATALINA_BASE:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_HOME:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_TMPDIR: /opt/webapp/apache-tomcat-8.5.27/temp
+Using JRE_HOME:        /opt/java/jre1.8.0_191
+Using CLASSPATH:       /opt/webapp/apache-tomcat-8.5.27/bin/bootstrap.jar:/opt/webapp/apache-tomcat-8.5.27/bin/tomcat-juli.jar
+29-Apr-2019 11:49:04.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.27
+29-Apr-2019 11:49:04.411 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 18 2018 20:12:40 UTC
+29-Apr-2019 11:49:04.411 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.27.0
+29-Apr-2019 11:49:04.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Apr-2019 11:49:04.417 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-112-generic
+29-Apr-2019 11:49:04.418 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Apr-2019 11:49:04.418 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/jre1.8.0_191
+29-Apr-2019 11:49:04.421 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-b12
+29-Apr-2019 11:49:04.422 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+29-Apr-2019 11:49:04.422 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 11:49:04.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 11:49:04.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/webapp/apache-tomcat-8.5.27/conf/logging.properties
+29-Apr-2019 11:49:04.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Apr-2019 11:49:04.435 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Apr-2019 11:49:04.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Apr-2019 11:49:04.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Apr-2019 11:49:04.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 11:49:04.447 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 11:49:04.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/webapp/apache-tomcat-8.5.27/temp
+29-Apr-2019 11:49:04.448 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+29-Apr-2019 11:49:06.261 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 11:49:06.453 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 11:49:06.487 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 11:49:06.499 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 11:49:06.503 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 6270 ms
+29-Apr-2019 11:49:06.645 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Apr-2019 11:49:06.648 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.27
+29-Apr-2019 11:49:06.724 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/webapp/apache-tomcat-8.5.27/webapps/ILP-0.0.1-20190411.192309-16.war]
+29-Apr-2019 11:49:08.711 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [105] milliseconds.
+29-Apr-2019 11:49:08.787 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/webapp/apache-tomcat-8.5.27/webapps/ILP-0.0.1-20190411.192309-16.war] has finished in [2,063] ms
+29-Apr-2019 11:49:08.789 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/examples]
+29-Apr-2019 11:49:09.247 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/examples] has finished in [458] ms
+29-Apr-2019 11:49:09.248 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/docs]
+29-Apr-2019 11:49:09.262 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/docs] has finished in [15] ms
+29-Apr-2019 11:49:09.262 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/manager]
+29-Apr-2019 11:49:09.313 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/manager] has finished in [51] ms
+29-Apr-2019 11:49:09.323 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/host-manager]
+29-Apr-2019 11:49:09.366 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/host-manager] has finished in [42] ms
+29-Apr-2019 11:49:09.366 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/ROOT]
+29-Apr-2019 11:49:09.382 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/ROOT] has finished in [16] ms
+29-Apr-2019 11:49:09.409 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 11:49:09.467 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 11:49:09.484 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2979 ms
+^C29-Apr-2019 11:50:39.380 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 11:50:39.466 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 11:50:39.519 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+29-Apr-2019 11:50:39.916 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 11:50:39.935 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 11:50:40.007 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 11:50:40.014 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker run -it b49659c2782c
+]0;root@e878428fea67: /opt/webapproot@e878428fea67:/opt/webapp# ls
+[0m[01;34mapache-tomcat-8.5.27[0m
+]0;root@e878428fea67: /opt/webapproot@e878428fea67:/opt/webapp# cd apache-tomcat-8.5.27/
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27root@e878428fea67:/opt/webapp/apache-tomcat-8.5.27# ls
+LICENSE  NOTICE  RELEASE-NOTES  RUNNING.txt  [0m[01;34mbin[0m  [01;34mconf[0m  [01;34mlib[0m  [01;34mlogs[0m  [01;34mtemp[0m  [01;34mwebapps[0m  [01;34mwork[0m
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27root@e878428fea67:/opt/webapp/apache-tomcat-8.5.27# cd webapps/
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27/webappsroot@e878428fea67:/opt/webapp/apache-tomcat-8.5.27/webapps# servertool            cd ..
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27root@e878428fea67:/opt/webapp/apache-tomcat-8.5.27# cd bin
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27/binroot@e878428fea67:/opt/webapp/apache-tomcat-8.5.27/bin# ls
+[0m[01;31mbootstrap.jar[0m       [01;31mcommons-daemon-native.tar.gz[0m  [01;32mdaemon.sh[0m         [01;32msetclasspath.sh[0m  [01;32mstartup.sh[0m            [01;32mtool-wrapper.sh[0m
+catalina-tasks.xml  [01;31mcommons-daemon.jar[0m            digest.bat        shutdown.bat     [01;31mtomcat-juli.jar[0m       version.bat
+catalina.bat        configtest.bat                [01;32mdigest.sh[0m         [01;32mshutdown.sh[0m      [01;31mtomcat-native.tar.gz[0m  [01;32mversion.sh[0m
+[01;32mcatalina.sh[0m         [01;32mconfigtest.sh[0m                 setclasspath.bat  startup.bat      tool-wrapper.bat
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27/binroot@e878428fea67:/opt/webapp/apache-tomcat-8.5.27/bin# cd ..
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27root@e878428fea67:/opt/webapp/apache-tomcat-8.5.27# conf    ls
+LICENSE  NOTICE  RELEASE-NOTES  RUNNING.txt  [0m[01;34mbin[0m  [01;34mconf[0m  [01;34mlib[0m  [01;34mlogs[0m  [01;34mtemp[0m  [01;34mwebapps[0m  [01;34mwork[0m
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27root@e878428fea67:/opt/webapp/apache-tomcat-8.5.27# cd conf
+]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27/confroot@e878428fea67:/opt/webapp/apache-tomcat-8.5.27/conf# vi server.xml 
+[?1049h[?1h=[1;41r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[41;1H"server.xml" 167 lines, 7511 characters[1;1H<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at[10;7Hhttp://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Note:  A "Server" is not itself a "Container", so you may not[19;6Hdefine subcomponents such as "Valves" at this level.[20;6HDocumentation at /docs/config/server.html
+ -->
+<Server port="8005" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <!-- Security listener. Documentation at /docs/config/listeners.html
+  <Listener className="org.apache.catalina.security.SecurityListener" />
+  -->
+  <!--APR library loader. Documentation at /docs/apr.html -->
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <!-- Prevent memory leaks due to use of particular java/javax APIs-->
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <!-- Global JNDI resources[35;8HDocumentation at /docs/jndi-resources-howto.html
+  -->
+  <GlobalNamingResources>
+    <!-- Editable user database that can also be used by[39;10HUserDatabaseRealm to authenticate users
+    -->[1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[1;40r[40;1H
+[1;41r[40;5H<Resource name="UserDatabase" auth="Container"[41;1H[K[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;15Htype="org.apache.catalina.UserDatabase"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;15Hdescription="User database that can be updated and saved"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;15Hfactory="org.apache.catalina.users.MemoryUserDatabaseFactory"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;15Hpathname="conf/tomcat-users.xml" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;3H</GlobalNamingResources>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;3H<!-- A "Service" is a collection of one or more "Connectors" that share[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;8Ha single "Container" Note:  A "Service" is not itself a "Container",[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;8Hso you may not define subcomponents such as "Valves" at this level.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;8HDocumentation at /docs/config/service.html[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;4H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;3H<Service name="Catalina">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!--The connectors can use a shared executor, you can define one or more named thread pools-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Executor name="tomcatThreadPool" namePrefix="catalina-exec-"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9HmaxThreads="150" minSpareThreads="4"/>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- A "Connector" represents an endpoint by which requests are received[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hand responses are returned. Documentation at :[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HJava HTTP Connector: /docs/config/http.html[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HJava AJP  Connector: /docs/config/ajp.html[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HAPR (HTTP/AJP) Connector: /docs/apr.html[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HDefine a non-SSL/TLS HTTP/1.1 Connector on port 8080[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Connector port="8080" protocol="HTTP/1.1"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HconnectionTimeout="20000"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HredirectPort="8443" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- A "Connector" using the shared thread pool-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Connector executor="tomcatThreadPool"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16Hport="8080" protocol="HTTP/1.1"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HconnectionTimeout="20000"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HredirectPort="8443" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HThis connector uses the NIO implementation. The default[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HSSLImplementation will depend on the presence of the APR/native[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hlibrary and the useOpenSSL attribute of the[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HAprLifecycleListener.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HEither JSSE or OpenSSL style configuration may be used regardless of[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hthe SSLImplementation selected. JSSE style configuration is used below.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HmaxThreads="150" SSLEnabled="true">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<SSLHostConfig>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;13H<Certificate certificateKeystoreFile="conf/localhost-rsa.jks"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;26Htype="RSA" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H</SSLHostConfig>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H</Connector>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HThis connector uses the APR/native implementation which always uses[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HOpenSSL for TLS.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HEither JSSE or OpenSSL style configuration may be used. OpenSSL style[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hconfiguration is used below.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Connector port="8443" protocol="org.apache.coyote.http11.Http11AprProtocol"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HmaxThreads="150" SSLEnabled="true" >[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<SSLHostConfig>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;13H<Certificate certificateKeyFile="conf/localhost-rsa-key.pem"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;26HcertificateFile="conf/localhost-rsa-cert.pem"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;26HcertificateChainFile="conf/localhost-rsa-chain.pem"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;26Htype="RSA" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H</SSLHostConfig>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H</Connector>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- Define an AJP 1.3 Connector on port 8009 -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- An Engine represents the entry point (within Catalina) that processes[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hevery request.  The Engine implementation for Tomcat stand alone[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hanalyzes the HTTP headers included with the request, and passes them[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10Hon to the appropriate Host (virtual host).[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;10HDocumentation at /docs/config/engine.html -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<!-- You should set jvmRoute to support load-balancing via AJP ie :[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H<Engine name="Catalina" defaultHost="localhost">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<!--For clustering, please take a look at documentation at:[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;11H/docs/cluster-howto.html  (simple how to)[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;11H/docs/config/cluster.html (reference documentation) -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<!-- Use the LockOutRealm to prevent attempts to guess user passwords[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;12Hvia a brute-force attack -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<Realm className="org.apache.catalina.realm.LockOutRealm">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<!-- This Realm uses the UserDatabase configured in the global JNDI[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14Hresources under the key "UserDatabase".  Any edits[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14Hthat are performed against this UserDatabase are immediately[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14Havailable for use by the Realm.  -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<Realm className="org.apache.catalina.realm.UserDatabaseRealm"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16HresourceName="UserDatabase"/>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H</Realm>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H<Host name="localhost"  appBase="webapps"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;13HunpackWARs="true" autoDeploy="true">[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<!-- SingleSignOn valve, share authentication between web applications[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14HDocumentation at: /docs/config/valve.html -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<!--[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<Valve className="org.apache.catalina.authenticator.SingleSignOn" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H-->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<!-- Access log processes all example.[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14HDocumentation at: /docs/config/valve.html[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;14HNote: The pattern used is equivalent to using pattern="common" -->[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;9H<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16Hprefix="localhost_access_log" suffix=".txt"[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;16Hpattern="%h %l %u %t &quot;%r&quot; %s %b" />[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;7H</Host>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;5H</Engine>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;3H</Service>[?12l[?25h[?25l[1;40r[40;1H
+[1;41r[40;1H</Server>[?12l[?25h[39;1H[38;1H[37;1H[36;1H[35;1H[27m[m[H[2J[?25l[1;7H<Realm className="org.apache.catalina.realm.LockOutRealm">[2;9H<!-- This Realm uses the UserDatabase configured in the global JNDI[3;14Hresources under the key "UserDatabase".  Any edits[4;14Hthat are performed against this UserDatabase are immediately[5;14Havailable for use by the Realm.  -->[6;9H<Realm className="org.apache.catalina.realm.UserDatabaseRealm"[7;16HresourceName="UserDatabase"/>[8;7H</Realm>[10;7H<Host name="localhost"  appBase="webapps"[11;13HunpackWARs="true" autoDeploy="true">[13;9H<!-- SingleSignOn valve, share authentication between web applications[14;14HDocumentation at: /docs/config/valve.html -->[15;9H<!--[16;9H<Valve className="org.apache.catalina.authenticator.SingleSignOn" />[17;9H-->[19;9H<!-- Access log processes all example.[20;14HDocumentation at: /docs/config/valve.html[21;14HNote: The pattern used is equivalent to using pattern="common" ---[22;1H>[23;9H<Valve className="org.apache.catalina.valves.AccessLogValve" directoryy[24;1H="logs"[25;16Hprefix="localhost_access_log" suffix=".txt"[26;16Hpattern="%h %l %u %t &quot;%r&quot; %s %b" />[28;7H</Host>
+    </Engine>
+  </Service>[26;1H[?12l[?25h[27m[m[H[2J[?25l[1;5H<Engine name="Catalina" defaultHost="localhost">[3;7H<!--For clustering, please take a look at documentation at:[4;11H/docs/cluster-howto.html  (simple how to)[5;11H/docs/config/cluster.html (reference documentation) -->[6;7H<!--[7;7H<Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>[8;7H-->[10;7H<!-- Use the LockOutRealm to prevent attempts to guess user passwords[11;12Hvia a brute-force attack -->[12;7H<Realm className="org.apache.catalina.realm.LockOutRealm">[13;9H<!-- This Realm uses the UserDatabase configured in the global JNDI[14;14Hresources under the key "UserDatabase".  Any edits[15;14Hthat are performed against this UserDatabase are immediately[16;14Havailable for use by the Realm.  -->[17;9H<Realm className="org.apache.catalina.realm.UserDatabaseRealm"[18;16HresourceName="UserDatabase"/>[19;7H</Realm>[21;7H<Host name="localhost"  appBase="webapps"[22;13HunpackWARs="true" autoDeploy="true">[24;9H<!-- SingleSignOn valve, share authentication between web applications[25;14HDocumentation at: /docs/config/valve.html -->[26;9H<!--[27;9H<Valve className="org.apache.catalina.authenticator.SingleSignOn" />[28;9H-->[30;9H<!-- Access log processes all example.[31;14HDocumentation at: /docs/config/valve.html[32;14HNote: The pattern used is equivalent to using pattern="common" -->[33;9H<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"[34;16Hprefix="localhost_access_log" suffix=".txt"[35;16Hpattern="%h %l %u %t &quot;%r&quot; %s %b" />[37;7H</Host>
+    </Engine>
+  </Service>
+</Server>[35;1H[?12l[?25h[27m[m[H[2J[?25l[1;7H<!--For clustering, please take a look at documentation at:[2;11H/docs/cluster-howto.html  (simple how to)[3;11H/docs/config/cluster.html (reference documentation) -->[4;7H<!--[5;7H<Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>[6;7H-->[8;7H<!-- Use the LockOutRealm to prevent attempts to guess user passwords[9;12Hvia a brute-force attack -->[10;7H<Realm className="org.apache.catalina.realm.LockOutRealm">[11;9H<!-- This Realm uses the UserDatabase configured in the global JNDI[12;14Hresources under the key "UserDatabase".  Any edits[13;14Hthat are performed against this UserDatabase are immediately[14;14Havailable for use by the Realm.  -->[15;9H<Realm className="org.apache.catalina.realm.UserDatabaseRealm"[16;16HresourceName="UserDatabase"/>[17;7H</Realm>[19;7H<Host name="localhost"  appBase="webapps"[20;13HunpackWARs="true" autoDeploy="true">[22;9H<!-- SingleSignOn valve, share authentication between web applications[23;14HDocumentation at: /docs/config/valve.html -->[24;9H<!--[25;9H<Valve className="org.apache.catalina.authenticator.SingleSignOn" />[26;9H-->[28;9H<!-- Access log processes all example.[29;14HDocumentation at: /docs/config/valve.html[30;14HNote: The pattern used is equivalent to using pattern="common" -->[31;9H<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"[32;16Hprefix="localhost_access_log" suffix=".txt"[33;16Hpattern="%h %l %u %t &quot;%r&quot; %s %b" />[35;7H</Host>
+    </Engine>
+  </Service>
+</Server>[33;1H[?12l[?25h[27m[m[H[2J[?25l[1;5H<Engine name="Catalina" defaultHost="localhost">[3;7H<!--For clustering, please take a look at documentation at:[4;11H/docs/cluster-howto.html  (simple how to)[5;11H/docs/config/cluster.html (reference documentation) -->[6;7H<!--[7;7H<Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>[8;7H-->[10;7H<!-- Use the LockOutRealm to prevent attempts to guess user passwords[11;12Hvia a brute-force attack -->[12;7H<Realm className="org.apache.catalina.realm.LockOutRealm">[13;9H<!-- This Realm uses the UserDatabase configured in the global JNDI[14;14Hresources under the key "UserDatabase".  Any edits[15;14Hthat are performed against this UserDatabase are immediately[16;14Havailable for use by the Realm.  -->[17;9H<Realm className="org.apache.catalina.realm.UserDatabaseRealm"[18;16HresourceName="UserDatabase"/>[19;7H</Realm>[21;7H<Host name="localhost"  appBase="webapps"[22;13HunpackWARs="true" autoDeploy="true">[24;9H<!-- SingleSignOn valve, share authentication between web applications[25;14HDocumentation at: /docs/config/valve.html -->[26;9H<!--[27;9H<Valve className="org.apache.catalina.authenticator.SingleSignOn" />[28;9H-->[30;9H<!-- Access log processes all example.[31;14HDocumentation at: /docs/config/valve.html[32;14HNote: The pattern used is equivalent to using pattern="common" -->[33;9H<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"[34;16Hprefix="localhost_access_log" suffix=".txt"[35;16Hpattern="%h %l %u %t &quot;%r&quot; %s %b" />[37;7H</Host>
+    </Engine>
+  </Service>
+</Server>[35;1H[?12l[?25h[?25l[41;1H:[?12l[?25hq![?25l[41;1H[K[41;1H[?1l>[?12l[?25h[?1049l]0;root@e878428fea67: /opt/webapp/apache-tomcat-8.5.27/confroot@e878428fea67:/opt/webapp/apache-tomcat-8.5.27/conf# exit
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker run -it b49659c2782c
+]0;root@7cd5f9cf9210: /opt/webapproot@7cd5f9cf9210:/opt/webapp# [K]0;root@7cd5f9cf9210: /opt/webapproot@7cd5f9cf9210:/opt/webapp# ls
+[0m[01;34mapache-tomcat-8.5.27[0m
+]0;root@7cd5f9cf9210: /opt/webapproot@7cd5f9cf9210:/opt/webapp# cd apache-tomcat-8.5.27/
+]0;root@7cd5f9cf9210: /opt/webapp/apache-tomcat-8.5.27root@7cd5f9cf9210:/opt/webapp/apache-tomcat-8.5.27# exit
+exit
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ docker run -it b49659c2782ccontainer run -it -p 12345:8080 java-app
+Using CATALINA_BASE:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_HOME:   /opt/webapp/apache-tomcat-8.5.27
+Using CATALINA_TMPDIR: /opt/webapp/apache-tomcat-8.5.27/temp
+Using JRE_HOME:        /opt/java/jre1.8.0_191
+Using CLASSPATH:       /opt/webapp/apache-tomcat-8.5.27/bin/bootstrap.jar:/opt/webapp/apache-tomcat-8.5.27/bin/tomcat-juli.jar
+29-Apr-2019 12:43:58.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.27
+29-Apr-2019 12:43:58.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 18 2018 20:12:40 UTC
+29-Apr-2019 12:43:58.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.27.0
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-112-generic
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/jre1.8.0_191
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-b12
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+29-Apr-2019 12:43:58.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 12:43:58.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 12:43:58.653 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/webapp/apache-tomcat-8.5.27/conf/logging.properties
+29-Apr-2019 12:43:58.657 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Apr-2019 12:43:58.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Apr-2019 12:43:58.660 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Apr-2019 12:43:58.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Apr-2019 12:43:58.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 12:43:58.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/webapp/apache-tomcat-8.5.27
+29-Apr-2019 12:43:58.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/webapp/apache-tomcat-8.5.27/temp
+29-Apr-2019 12:43:58.665 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+29-Apr-2019 12:44:00.459 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 12:44:00.558 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 12:44:00.576 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 12:44:00.578 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+29-Apr-2019 12:44:00.586 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 6093 ms
+29-Apr-2019 12:44:00.844 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Apr-2019 12:44:00.845 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.27
+29-Apr-2019 12:44:00.974 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/webapp/apache-tomcat-8.5.27/webapps/ILP-0.0.1-20190411.192309-16.war]
+29-Apr-2019 12:44:02.419 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/webapp/apache-tomcat-8.5.27/webapps/ILP-0.0.1-20190411.192309-16.war] has finished in [1,442] ms
+29-Apr-2019 12:44:02.422 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/examples]
+29-Apr-2019 12:44:02.983 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/examples] has finished in [562] ms
+29-Apr-2019 12:44:02.983 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/docs]
+29-Apr-2019 12:44:03.049 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/docs] has finished in [66] ms
+29-Apr-2019 12:44:03.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/manager]
+29-Apr-2019 12:44:03.182 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/manager] has finished in [129] ms
+29-Apr-2019 12:44:03.183 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/host-manager]
+29-Apr-2019 12:44:03.324 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/host-manager] has finished in [140] ms
+29-Apr-2019 12:44:03.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/ROOT]
+29-Apr-2019 12:44:03.464 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/webapp/apache-tomcat-8.5.27/webapps/ROOT] has finished in [135] ms
+29-Apr-2019 12:44:03.486 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 12:44:03.521 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 12:44:03.568 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2981 ms
+^C29-Apr-2019 12:45:18.421 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 12:45:18.449 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 12:45:18.457 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+29-Apr-2019 12:45:18.662 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 12:45:18.677 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+29-Apr-2019 12:45:18.690 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+29-Apr-2019 12:45:18.692 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+]0;osgdev@TG-Devops-OS067: ~/dockerhandson[01;32mosgdev@TG-Devops-OS067[00m:[01;34m~/dockerhandson[00m$ exit
+exit
+
+Script done on Monday 29 April 2019 06:15:23 PM IST
